@@ -1,7 +1,7 @@
 <?php
 
 require_once "../../conexion/conexion.php";
-include "../paciente.php";
+include "";
 
 $conecta=conectarBD();
 
