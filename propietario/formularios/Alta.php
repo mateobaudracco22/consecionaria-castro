@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Alta Paciente</title>
+  <title>Alta Propietario</title>
 </head>
 <body>
-  <h1>Centro Médico</h1>
+  <h1>Concesionaria</h1>
   <h2>Formulario de Alta de Propietario</h2>
   <h3>Ingrese los datos del Propietario a registrar</h3>
 <!-- /* 

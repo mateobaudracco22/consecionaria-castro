@@ -24,7 +24,7 @@ if (!$conexion) {
 
 // 3. Ejecutar el alta del paciente sobre la base de datos
 // invoque al procedimiento que registra una persona en la base de datos
-$verificarConsulta = altaPropietario($conexion, $id_clave,  $atributo1, $atributo2 , $atributo3, $atributo4, $atributo5, $atributo6);
+$verificarConsulta = altaPropietario($conexion, $id_clave,  $atributo1, $atributo2 , $atributo3, $atributo4, $atributo5);
 
 if (!$verificarConsulta) { 
     echo "Error al registrar el propietario: " . mysqli_error($conexion);

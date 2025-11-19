@@ -49,7 +49,7 @@ mysqli_close($conexion);
 
 <?php if (is_array($propietario)) { ?>
 <!-- Formulario de actualización -->
-<form method="POST" action="indique la ruta del controller que recepcionara los datos de este formulario">
+<form method="POST" action="../controller/actualizar.php">
     <input type="hidden" name="id_propietario" value="<?php echo $propietario['id_propietario']; ?>">
 
     <label>Nombre:</label>

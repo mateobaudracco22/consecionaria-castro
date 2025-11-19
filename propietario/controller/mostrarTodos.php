@@ -1,13 +1,13 @@
 <?php
 
 require_once "../../conexion/conexion.php";
-include "";
+include "../propietario.php";
 
 $conecta=conectarBD();
 
-$consulta="dar la consulta para mostrar todos los pacientes en sql entre esta comillas dobles";
+$consulta="SELECT * FROM propietario";
 
-mostrarPacientes($conecta,$consulta);
+mostrarPropietario($conecta,$consulta);
 echo '<a href="../../index.html">Volver al menu principal </a>';
   
 

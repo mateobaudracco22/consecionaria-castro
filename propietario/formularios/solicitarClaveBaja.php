@@ -8,7 +8,7 @@
 <body>
     <h1>Consecionaria</h1>
     <h2>Ingrese la clave del Propietario para buscar</h2>
-     <form action="#" method="post">
+     <form action="propietario/controller/baja.php" method="post">
        <label for="id_propietario">Nro de Legajo : </label> 
         <input type="text" name="id_propietario" /> 
        
