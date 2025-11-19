@@ -2,7 +2,7 @@
 
 function conectarBD(){
 
-    $conecta=mysqli_connect("localhost","root","","consecionaria");
+    $conecta=mysqli_connect("localhost","root"," ","concesionaria");
     return $conecta;
 }
 ?>
