@@ -1,0 +1,52 @@
+/* ----- CONFIGURACIÓN GENERAL ----- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #050713, #b9910a);
+    color: white;
+}
+
+/* ----- TITULO ----- */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* ----- CAJA PRINCIPAL ----- */
+.box {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 450px;
+    margin: 40px auto;
+    backdrop-filter: blur(6px);
+}
+
+/* ----- LINKS DEL MENÚ ----- */
+.box a {
+    display: block;
+    font-size: 18px;
+    padding: 12px 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.box a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
+}
+
+/* ----- MOBILE RESPONSIVE ----- */
+@media (max-width: 500px) {
+    h1 { font-size: 26px; }
+    .box { margin: 20px; padding: 15px; }
+    .box a { font-size: 16px; }
+}
