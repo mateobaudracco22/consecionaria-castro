@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Alta Propietario</title>
+  <link rel="stylesheet" href="../css/style_alta.css">
 </head>
 <body>
   <h1>Concesionaria</h1>
