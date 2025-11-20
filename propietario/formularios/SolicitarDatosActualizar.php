@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Actualizar Propietario</title>
+  <link rel="stylesheet" href="../../css/style_actualizar.css">
 </head>
 <body>
 
