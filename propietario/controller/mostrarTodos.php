@@ -5,7 +5,7 @@ include "../propietario.php";
 
 $conecta=conectarBD();
 
-$consulta="SELECT * FROM Propietario";
+$consulta="SELECT * FROM propietario";
 
 mostrarPropietario($conecta,$consulta);
 echo '<a href="../../index.html">Volver al menu principal </a>';

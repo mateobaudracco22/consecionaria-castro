@@ -6,7 +6,7 @@
     <title>Concesionaria</title>
 </head>
 <body>
-    <h1>Empresa</h1>
+    <h1>Concesionaria</h1>
     <h2>Ingrese el legajo del propietario a buscar</h2>
     <form action="../controller/mostrarUno.php" method="post">
        <label for="id_propietario">Nro de Legajo : </label> 

@@ -5,7 +5,7 @@ require_once "../../conexion/conexion.php";
 // incluya aqui la ruta para acceder a los subprogramas que acceden a la base de datos a la tabla que 
 //esta implementando
 
-include "../propietario.php";
+include "../auto.php";
 
 $conexion = conectarBD();
 
@@ -20,7 +20,7 @@ if (isset($_POST['actualizar'])) {
 // El índice de $_POST debe coincidir con el atributo 'name' de cada campo del formulario.
 // Así, el controlador puede recibir correctamente los datos enviados por el formulario.
 
-    $id_clave  = intval($_POST['id_propietario']); // para campos de tipo number
+    $id_clave  = intval($_POST['']); // para campos de tipo number
     $atributo1 = mysqli_real_escape_string($conexion, $_POST['nombre']); //name="nombre" // campos de tipo txt
     $atributo2 = mysqli_real_escape_string($conexion, $_POST['apellido']);//name="apellido"
     $atributo3 = mysqli_real_escape_string($conexion, $_POST['dni']);

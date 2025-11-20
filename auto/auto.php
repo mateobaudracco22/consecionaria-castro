@@ -14,7 +14,7 @@ function altaPropietario($conexion, $id_propietario, $nombre, $apellido, $dni, $
 
     if (is_null(obtenerPropietario($conexion, $id_propietario))) {
         // Insertar nuevo propietario
-        $sql = "INSERT INTO propietario (id_propietario, nombre, apellido, dni, direccion, telefono)
+        $sql = "INSERT INTO Propietario (id_propietario, nombre, apellido, dni, direccion, telefono)
                 VALUES ($id_propietario, '$nombre', '$apellido', '$dni', '$direccion', '$telefono')";
 
         $resultadoInsert = mysqli_query($conexion, $sql);
@@ -33,7 +33,7 @@ function altaPropietario($conexion, $id_propietario, $nombre, $apellido, $dni, $
 }
 
 // === Función para mostrar todos los propietarios ===
-function mostrarPropietario($conexion, $consulta) {
+function mostrarPropietarios($conexion, $consulta) {
 
     $resultado = mysqli_query($conexion, $consulta);
 
@@ -81,15 +81,15 @@ function mostrarPropietario($conexion, $consulta) {
 // === Función para eliminar un propietario ===
 function eliminarPropietario($conexion, $id_propietario) {
 
-    $consulta = "SELECT nombre, apellido FROM propietario WHERE id_propietario = $id_propietario";
+    $consulta = "SELECT nombre, apellido FROM Propietario WHERE id_propietario = $id_propietario";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado && mysqli_num_rows($resultado) > 0) {
         $propietario = mysqli_fetch_assoc($resultado);
 
-        $delete = "DELETE FROM propietario WHERE id_propietario = $id_propietario";
+        $delete = "DELETE FROM Propietario WHERE id_propietario = $id_propietario";
         if (mysqli_query($conexion, $delete)) {
-            return "<p>propietario <strong>{$propietario['nombre']} {$propietario['apellido']}</strong> (ID $id_propietario) eliminado correctamente.</p>";
+            return "<p>Propietario <strong>{$propietario['nombre']} {$propietario['apellido']}</strong> (ID $id_propietario) eliminado correctamente.</p>";
         } else {
             return "<p>Error al eliminar: " . mysqli_error($conexion) . "</p>";
         }
@@ -101,7 +101,7 @@ function eliminarPropietario($conexion, $id_propietario) {
 // === Función para actualizar los datos de un propietario ===
 function actualizarPropietario($conexion, $id_propietario, $nombre, $apellido, $dni, $direccion, $telefono) {
 
-    $sql = "UPDATE propietario 
+    $sql = "UPDATE Propietario 
             SET nombre='$nombre', apellido='$apellido', dni='$dni', direccion='$direccion', telefono='$telefono'
             WHERE id_propietario=$id_propietario";
 
@@ -112,17 +112,16 @@ function actualizarPropietario($conexion, $id_propietario, $nombre, $apellido, $
     }
 }
 
-// === Función para mostrar un propietario por ID ===
 function mostrarUnPropietario($conexion, $id_propietario) {
 
-    $consulta = "SELECT * FROM propietario WHERE id_propietario=$id_propietario";
+    $consulta = "SELECT * FROM Propietario WHERE id_propietario=$id_propietario";
     mostrarPropietarios($conexion, $consulta);
 }
 
 // === Función para obtener un propietario (usada para verificar existencia) ===
 function obtenerPropietario($conexion, $id_propietario) {
 
-    $sql = "SELECT * FROM propietario WHERE id_propietario = $id_propietario";
+    $sql = "SELECT * FROM Propietario WHERE id_propietario = $id_propietario";
     $resultado = mysqli_query($conexion, $sql);
 
     if ($resultado && mysqli_num_rows($resultado) > 0) {
